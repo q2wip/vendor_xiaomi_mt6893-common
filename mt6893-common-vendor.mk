@@ -473,6 +473,7 @@ PRODUCT_PACKAGES += \
     libDR \
     libaiselector \
     libdpframework \
+    libmnlm \
     libneuron_platform.vpu \
     libneuron_runtime.5 \
     libneuron_runtime \

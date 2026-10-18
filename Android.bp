@@ -7771,6 +7771,34 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
+    // A17's external/libmnl would collide with the MTK GPS helper at
+    // /vendor/lib64/libmnl.so. Install the MTK helper as libmnlm.so; its
+    // SONAME and mnld's DT_NEEDED entry are patched to match.
+    name: "libmnlm",
+    owner: "xiaomi",
+    strip: {
+        none: true,
+    },
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/lib64/mt6893/libmnl.so",
+            ],
+            shared_libs: [
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    prefer: true,
+    soc_specific: true,
+}
+
+cc_prebuilt_library_shared {
     name: "libneuron_platform.vpu",
     owner: "xiaomi",
     strip: {
@@ -10182,7 +10210,7 @@ cc_prebuilt_binary {
                 "proprietary/vendor/bin/mnld",
             ],
             shared_libs: [
-                "libmnl",
+                "libmnlm",
                 "libcurl",
                 "libcutils",
                 "libnvram",
