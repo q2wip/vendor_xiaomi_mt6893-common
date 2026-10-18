@@ -166,7 +166,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-iseeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-iseeservice.rc \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-miteeservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mtdservice@1.2-miteeservice.rc \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/init/vpud.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vpud.rc \
-    vendor/xiaomi/mt6893-common/proprietary/vendor/etc/init/wlan_assistant.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/wlan_assistant.rc \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     vendor/xiaomi/mt6893-common/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
@@ -391,7 +390,7 @@ PRODUCT_PACKAGES += \
     libdlbdsservice \
     libdre \
     libforkexecwrap \
-    libformatter \
+    libformatter_vendor \
     libgamehdr \
     libged \
     libgf_ca \
@@ -474,7 +473,6 @@ PRODUCT_PACKAGES += \
     libDR \
     libaiselector \
     libdpframework \
-    libmnl \
     libneuron_platform.vpu \
     libneuron_runtime.5 \
     libneuron_runtime \
@@ -583,7 +581,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libDR_so \
     vendor_lib64_libaiselector_so \
     vendor_lib64_libdpframework_so \
-    vendor_lib64_libmnl_so \
     vendor_lib64_libmtk_drvb_so \
     vendor_lib64_libneuron_platform_vpu_so \
     vendor_lib64_libneuron_runtime_5_so \
